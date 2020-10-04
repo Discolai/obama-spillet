@@ -1,15 +1,15 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Menu from "./components/menu";
 
 class App extends Component {
-  render(): React.ReactNode {
+  render(): JSX.Element {
     return (
-      <div>
-        <div className="container">
-          <header className="text-center mt-4">
-            <h1>Hello World!</h1>
-          </header>
-        </div>
-      </div>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Menu}></Route>
+        </Switch>
+      </Router>
     );
   }
 }

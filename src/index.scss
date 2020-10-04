@@ -1,1 +1,26 @@
+$american-red: #b22234;
+$american-blue: #3c3b6e;
+
+$theme-colors: (
+  "american-red": $american-red,
+  "american-blue": $american-blue
+);
+$body-bg: $american-red;
+
 @import "~bootstrap/scss/bootstrap.scss";
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+}
+
+.center {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > * {
+    margin-bottom: $spacer;
+  }
+}
