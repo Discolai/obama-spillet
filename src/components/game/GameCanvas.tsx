@@ -25,6 +25,8 @@ class GameCanvas extends Component<IProps, IState> {
   canvas = React.createRef<HTMLCanvasElement>();
   canvasWrapper = React.createRef<HTMLDivElement>();
   obamaImg = new Image();
+  americanFlag = new Image();
+
   obamaSong = new Audio(ObamaSong);
 
   spawnInterval: number | null = null;
@@ -40,7 +42,7 @@ class GameCanvas extends Component<IProps, IState> {
   };
 
   componentDidMount(): void {
-    const { obamas, currentDimension } = this;
+    const { obamas, obamaImg, americanFlag, currentDimension } = this;
     const canvas = this.canvas.current;
     const canvasWrapper = this.canvasWrapper.current;
 
@@ -49,7 +51,10 @@ class GameCanvas extends Component<IProps, IState> {
       return;
     }
 
-    this.handleStartGame();
+    obamaImg.src = ObamaImg;
+
+    americanFlag.src = AmericanFlag;
+    americanFlag.onload = () => this.handleStartGame();
 
     setCanvasSize(canvas, canvasWrapper);
 
@@ -79,15 +84,15 @@ class GameCanvas extends Component<IProps, IState> {
   }
 
   handleStartGame = (): void => {
-    const { obamaImg, obamaSong } = this;
+    console.log("start");
+
+    const { obamaSong } = this;
     obamaSong.loop = true;
     obamaSong.play();
     this.setState({ gameOver: false, score: 0 });
     this.obamas = [];
 
-    obamaImg.src = ObamaImg;
-    obamaImg.onload = () =>
-      (this.updateInterval = window.requestAnimationFrame(this.updateObama));
+    this.updateInterval = window.requestAnimationFrame(this.updateObama);
 
     this.spawnInterval = window.setInterval(this.spawnObama, 1000);
   };
@@ -175,7 +180,7 @@ class GameCanvas extends Component<IProps, IState> {
           className="border border-white"
           ref={this.canvas}
           style={{
-            backgroundImage: `url(${AmericanFlag})`,
+            backgroundImage: `url(${this.americanFlag.src})`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover"
           }}

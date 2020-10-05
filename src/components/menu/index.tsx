@@ -1,9 +1,16 @@
 import React, { Component } from "react";
 import { RouteComponentProps } from "react-router-dom";
+import AmericanFlag from "../../assets/american-flag.png";
+import ObamaImg from "../../assets/obama.png";
 
 class Menu extends Component<RouteComponentProps> {
   handlePlay(): void {
     this.props.history.push("/play");
+  }
+
+  componentDidMount(): void {
+    new Image().src = AmericanFlag;
+    new Image().src = ObamaImg;
   }
 
   render(): JSX.Element {
@@ -11,9 +18,6 @@ class Menu extends Component<RouteComponentProps> {
       <div>
         <div className="container wrapper">
           <div className="center">
-            <h3 className="font-weight-bold text-american-blue">
-              Amerikanerne presenterer
-            </h3>
             <h1 className="font-weight-bold display-2 text-white">
               Vokt dem for Obama
             </h1>
