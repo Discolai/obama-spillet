@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e47d98b1.chunk.css",
+    "main.js": "/static/js/main.9374f642.chunk.js",
+    "main.js.map": "/static/js/main.9374f642.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.9d7197c7.js",
+    "runtime-main.js.map": "/static/js/runtime-main.9d7197c7.js.map",
+    "static/js/2.772376c2.chunk.js": "/static/js/2.772376c2.chunk.js",
+    "static/js/2.772376c2.chunk.js.map": "/static/js/2.772376c2.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.43ca618308c3801af3ea9c7f05ec74fd.js": "/precache-manifest.43ca618308c3801af3ea9c7f05ec74fd.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.e47d98b1.chunk.css.map": "/static/css/main.e47d98b1.chunk.css.map",
+    "static/js/2.772376c2.chunk.js.LICENSE.txt": "/static/js/2.772376c2.chunk.js.LICENSE.txt",
+    "static/media/american-flag.png": "/static/media/american-flag.8ced8f71.png",
+    "static/media/obama-sangen.mp3": "/static/media/obama-sangen.17e3cc89.mp3",
+    "static/media/obama.png": "/static/media/obama.1bb75a73.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9d7197c7.js",
+    "static/js/2.772376c2.chunk.js",
+    "static/css/main.e47d98b1.chunk.css",
+    "static/js/main.9374f642.chunk.js"
+  ]
+}
