@@ -9,9 +9,17 @@ $body-bg: $american-red;
 
 @import "~bootstrap/scss/bootstrap.scss";
 
+#root {
+  height: 100vh;
+}
+
 .wrapper {
   min-height: 100vh;
   display: flex;
+}
+
+.flag-border {
+  border: 5px solid $american-blue;
 }
 
 .center {
@@ -21,6 +29,6 @@ $body-bg: $american-red;
   align-items: center;
 
   > * {
-    margin-bottom: $spacer;
+    margin-bottom: 2 * $spacer;
   }
 }
