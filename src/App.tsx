@@ -6,7 +6,7 @@ import Game from "./components/game";
 class App extends Component {
   render(): JSX.Element {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route exact path="/" component={Menu}></Route>
           <Route exact path="/play" component={Game}></Route>

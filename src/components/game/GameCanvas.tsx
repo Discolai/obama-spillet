@@ -33,7 +33,7 @@ class GameCanvas extends Component<IProps, IState> {
   updateInterval: number | null = null;
   obamas: Obama[] = [];
 
-  currentDimension = { w: 50, h: 50 } as Rect;
+  obamaDimensions = { w: 50, h: 50 } as Rect;
   mousePos = new DOMPoint();
 
   state: Readonly<IState> = {
@@ -42,7 +42,7 @@ class GameCanvas extends Component<IProps, IState> {
   };
 
   componentDidMount(): void {
-    const { obamas, obamaImg, americanFlag, currentDimension } = this;
+    const { obamas, obamaImg, americanFlag, obamaDimensions } = this;
     const canvas = this.canvas.current;
     const canvasWrapper = this.canvasWrapper.current;
 
@@ -57,10 +57,13 @@ class GameCanvas extends Component<IProps, IState> {
     americanFlag.onload = () => this.handleStartGame();
 
     setCanvasSize(canvas, canvasWrapper);
+    this.updateObamaDimensions();
 
     canvas.onresize = () => {
       setCanvasSize(canvas, canvasWrapper);
-      this.drawObamas();
+      this.updateObamaDimensions();
+
+      // this.drawObamas();
     };
 
     canvas.onmousemove = (e: MouseEvent) => {
@@ -70,8 +73,8 @@ class GameCanvas extends Component<IProps, IState> {
         const rect = new DOMRect(
           obama.pos.x,
           obama.pos.y,
-          currentDimension.w,
-          currentDimension.h
+          obamaDimensions.w,
+          obamaDimensions.h
         );
         return rectContains(rect, pos);
       });
@@ -112,7 +115,7 @@ class GameCanvas extends Component<IProps, IState> {
     const canvas = this.canvas.current;
     const {
       obamaImg,
-      currentDimension: { w, h }
+      obamaDimensions: { w, h }
     } = this;
     if (!canvas) return;
 
@@ -129,7 +132,7 @@ class GameCanvas extends Component<IProps, IState> {
   spawnObama = (): void => {
     if (!this.canvas.current) return;
     const { width, height } = this.canvas.current;
-    const { w, h } = this.currentDimension;
+    const { w, h } = this.obamaDimensions;
 
     const x = randMinMax(w, width - w);
     const y = randMinMax(h, height - h);
@@ -150,21 +153,51 @@ class GameCanvas extends Component<IProps, IState> {
       obama.move(
         { x: 0, y: 0, w, h } as Rect,
         {
-          w: this.currentDimension.w,
-          h: this.currentDimension.h
+          w: this.obamaDimensions.w,
+          h: this.obamaDimensions.h
         } as Rect,
         2
       );
       const rect = new DOMRect(
         obama.pos.x,
         obama.pos.y,
-        this.currentDimension.w,
-        this.currentDimension.h
+        this.obamaDimensions.w,
+        this.obamaDimensions.h
       );
       if (rectContains(rect, this.mousePos)) this.handleGameOver();
     });
     this.drawObamas();
     if (!this.state.gameOver) window.requestAnimationFrame(this.updateObama);
+  };
+
+  updateObamaDimensions = (): void => {
+    console.log(this.canvas.current);
+
+    if (!this.canvas.current) return;
+
+    const { width } = this.canvas.current;
+    console.log(width);
+
+    if (width > 2000) {
+      this.obamaDimensions.w = 200;
+      this.obamaDimensions.h = 256;
+    } else if (width > 1200) {
+      this.obamaDimensions.w = 100;
+      this.obamaDimensions.h = 128;
+    } else if (width > 992) {
+      this.obamaDimensions.w = 60;
+      this.obamaDimensions.h = 77;
+    } else if (width > 768) {
+      this.obamaDimensions.w = 40;
+      this.obamaDimensions.h = 51;
+    } else if (width > 576) {
+      this.obamaDimensions.w = 20;
+      this.obamaDimensions.h = 26;
+    } else {
+      this.obamaDimensions.w = 10;
+      this.obamaDimensions.h = 13;
+    }
+    console.log(this.obamaDimensions);
   };
 
   render(): JSX.Element {
