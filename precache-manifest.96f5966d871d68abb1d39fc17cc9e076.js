@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fc38172d33555a53dd2b04f650f0f8db",
+    "revision": "1e16a341f13311356207f0e716e88b2f",
     "url": "obama-spillet/index.html"
   },
   {
-    "revision": "9b73fb8a1c020c22f322",
+    "revision": "4db9b3dd40af8c3a8926",
     "url": "obama-spillet/static/css/main.e47d98b1.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "obama-spillet/static/js/2.772376c2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9b73fb8a1c020c22f322",
-    "url": "obama-spillet/static/js/main.fac2cf1a.chunk.js"
+    "revision": "4db9b3dd40af8c3a8926",
+    "url": "obama-spillet/static/js/main.dbbed3a0.chunk.js"
   },
   {
     "revision": "e7ccccb7a2a071b3df87",

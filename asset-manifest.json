@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "obama-spillet/static/css/main.e47d98b1.chunk.css",
-    "main.js": "obama-spillet/static/js/main.fac2cf1a.chunk.js",
-    "main.js.map": "obama-spillet/static/js/main.fac2cf1a.chunk.js.map",
+    "main.js": "obama-spillet/static/js/main.dbbed3a0.chunk.js",
+    "main.js.map": "obama-spillet/static/js/main.dbbed3a0.chunk.js.map",
     "runtime-main.js": "obama-spillet/static/js/runtime-main.93d8e5e4.js",
     "runtime-main.js.map": "obama-spillet/static/js/runtime-main.93d8e5e4.js.map",
     "static/js/2.772376c2.chunk.js": "obama-spillet/static/js/2.772376c2.chunk.js",
     "static/js/2.772376c2.chunk.js.map": "obama-spillet/static/js/2.772376c2.chunk.js.map",
     "index.html": "obama-spillet/index.html",
-    "precache-manifest.dd890bb31470fe12888343a4b67bf86c.js": "obama-spillet/precache-manifest.dd890bb31470fe12888343a4b67bf86c.js",
+    "precache-manifest.96f5966d871d68abb1d39fc17cc9e076.js": "obama-spillet/precache-manifest.96f5966d871d68abb1d39fc17cc9e076.js",
     "service-worker.js": "obama-spillet/service-worker.js",
     "static/css/main.e47d98b1.chunk.css.map": "obama-spillet/static/css/main.e47d98b1.chunk.css.map",
     "static/js/2.772376c2.chunk.js.LICENSE.txt": "obama-spillet/static/js/2.772376c2.chunk.js.LICENSE.txt",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.93d8e5e4.js",
     "static/js/2.772376c2.chunk.js",
     "static/css/main.e47d98b1.chunk.css",
-    "static/js/main.fac2cf1a.chunk.js"
+    "static/js/main.dbbed3a0.chunk.js"
   ]
 }
