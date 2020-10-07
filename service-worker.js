@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/obama-spillet/precache-manifest.b9087e0b863d72efb30179838ab4866b.js"
+  "/obama-spillet/precache-manifest.113a979fb1d5f62cfdb5dc12a2d0743a.js"
 );
 
 self.addEventListener('message', (event) => {
