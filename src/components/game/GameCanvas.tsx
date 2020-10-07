@@ -34,6 +34,7 @@ class GameCanvas extends Component<IProps, IState> {
   obamas: Obama[] = [];
 
   obamaDimensions = { w: 50, h: 50 } as Rect;
+  obamaSpeed = 1;
   mousePos = new DOMPoint();
 
   state: Readonly<IState> = {
@@ -156,7 +157,7 @@ class GameCanvas extends Component<IProps, IState> {
           w: this.obamaDimensions.w,
           h: this.obamaDimensions.h
         } as Rect,
-        2
+        this.obamaSpeed
       );
       const rect = new DOMRect(
         obama.pos.x,
@@ -178,24 +179,30 @@ class GameCanvas extends Component<IProps, IState> {
     const { width } = this.canvas.current;
     console.log(width);
 
-    if (width > 2000) {
+    if (width > 3500) {
       this.obamaDimensions.w = 200;
       this.obamaDimensions.h = 256;
+      this.obamaSpeed = 5;
     } else if (width > 1200) {
       this.obamaDimensions.w = 100;
       this.obamaDimensions.h = 128;
+      this.obamaSpeed = 4;
     } else if (width > 992) {
       this.obamaDimensions.w = 60;
       this.obamaDimensions.h = 77;
+      this.obamaSpeed = 3;
     } else if (width > 768) {
       this.obamaDimensions.w = 40;
       this.obamaDimensions.h = 51;
+      this.obamaSpeed = 2;
     } else if (width > 576) {
       this.obamaDimensions.w = 20;
       this.obamaDimensions.h = 26;
+      this.obamaSpeed = 2;
     } else {
       this.obamaDimensions.w = 10;
       this.obamaDimensions.h = 13;
+      this.obamaSpeed = 2;
     }
     console.log(this.obamaDimensions);
   };
