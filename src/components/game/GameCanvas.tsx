@@ -177,16 +177,19 @@ class GameCanvas extends Component<IProps, IState> {
     if (!this.canvas.current) return;
 
     const { width } = this.canvas.current;
-    console.log(width);
 
     if (width > 3500) {
       this.obamaDimensions.w = 200;
       this.obamaDimensions.h = 256;
       this.obamaSpeed = 5;
-    } else if (width > 1200) {
+    } else if (width > 2000) {
       this.obamaDimensions.w = 100;
       this.obamaDimensions.h = 128;
       this.obamaSpeed = 4;
+    } else if (width > 1200) {
+      this.obamaDimensions.w = 80;
+      this.obamaDimensions.h = 102;
+      this.obamaSpeed = 3;
     } else if (width > 992) {
       this.obamaDimensions.w = 60;
       this.obamaDimensions.h = 77;
@@ -204,7 +207,6 @@ class GameCanvas extends Component<IProps, IState> {
       this.obamaDimensions.h = 13;
       this.obamaSpeed = 2;
     }
-    console.log(this.obamaDimensions);
   };
 
   render(): JSX.Element {
