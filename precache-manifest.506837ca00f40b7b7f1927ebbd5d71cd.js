@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "af2d5e0803a2a70d81c4f9ac58fdd7bd",
+    "revision": "b2b97472a4d63e244ad635d5f7c911e4",
     "url": "/obama-spillet/index.html"
   },
   {
