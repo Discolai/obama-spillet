@@ -19,6 +19,7 @@ interface IProps {
 interface IState {
   gameOver: boolean;
   score: number;
+  paused: boolean;
 }
 
 class GameCanvas extends Component<IProps, IState> {
@@ -39,7 +40,8 @@ class GameCanvas extends Component<IProps, IState> {
 
   state: Readonly<IState> = {
     gameOver: false,
-    score: 0
+    score: 0,
+    paused: true
   };
 
   componentDidMount(): void {
@@ -63,8 +65,6 @@ class GameCanvas extends Component<IProps, IState> {
     canvas.onresize = () => {
       setCanvasSize(canvas, canvasWrapper);
       this.updateObamaDimensions();
-
-      // this.drawObamas();
     };
 
     canvas.onmousemove = (e: MouseEvent) => {
@@ -81,18 +81,36 @@ class GameCanvas extends Component<IProps, IState> {
       });
       if (hit) this.handleGameOver();
     };
+
+    canvas.onmouseleave = () => {
+      this.pauseGame();
+    };
+
+    canvas.onmouseenter = () => {
+      this.resumeGame();
+    };
   }
 
   componentWillUnmount(): void {
     this.handleGameOver();
   }
 
+  pauseGame = (): void => {
+    this.setState({ paused: true });
+    this.obamaSong.pause();
+  };
+
+  resumeGame = (): void => {
+    this.setState({ paused: false });
+    this.obamaSong.play();
+  };
+
   handleStartGame = (): void => {
     console.log("start");
 
     const { obamaSong } = this;
     obamaSong.loop = true;
-    obamaSong.play();
+    obamaSong.currentTime = 0;
     this.setState({ gameOver: false, score: 0 });
     this.obamas = [];
 
@@ -131,7 +149,7 @@ class GameCanvas extends Component<IProps, IState> {
   };
 
   spawnObama = (): void => {
-    if (!this.canvas.current) return;
+    if (!this.canvas.current || this.state.paused) return;
     const { width, height } = this.canvas.current;
     const { w, h } = this.obamaDimensions;
 
@@ -147,7 +165,11 @@ class GameCanvas extends Component<IProps, IState> {
   };
 
   updateObama = (): void => {
-    if (!this.canvas.current) return;
+    if (!this.canvas.current || this.state.paused) {
+      window.requestAnimationFrame(this.updateObama);
+      return;
+    }
+
     const { width: w, height: h } = this.canvas.current;
 
     this.obamas.forEach((obama: Obama) => {
