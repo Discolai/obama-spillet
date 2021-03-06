@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/obama-spillet/static/css/main.e47d98b1.chunk.css",
-    "main.js": "/obama-spillet/static/js/main.397360df.chunk.js",
-    "main.js.map": "/obama-spillet/static/js/main.397360df.chunk.js.map",
+    "main.css": "/obama-spillet/static/css/main.a64c230a.chunk.css",
+    "main.js": "/obama-spillet/static/js/main.09c151f8.chunk.js",
+    "main.js.map": "/obama-spillet/static/js/main.09c151f8.chunk.js.map",
     "runtime-main.js": "/obama-spillet/static/js/runtime-main.9d40e554.js",
     "runtime-main.js.map": "/obama-spillet/static/js/runtime-main.9d40e554.js.map",
-    "static/js/2.772376c2.chunk.js": "/obama-spillet/static/js/2.772376c2.chunk.js",
-    "static/js/2.772376c2.chunk.js.map": "/obama-spillet/static/js/2.772376c2.chunk.js.map",
+    "static/js/2.0878e46d.chunk.js": "/obama-spillet/static/js/2.0878e46d.chunk.js",
+    "static/js/2.0878e46d.chunk.js.map": "/obama-spillet/static/js/2.0878e46d.chunk.js.map",
     "index.html": "/obama-spillet/index.html",
-    "precache-manifest.506837ca00f40b7b7f1927ebbd5d71cd.js": "/obama-spillet/precache-manifest.506837ca00f40b7b7f1927ebbd5d71cd.js",
+    "precache-manifest.8680d34f5f189606064196d0bd5cd7eb.js": "/obama-spillet/precache-manifest.8680d34f5f189606064196d0bd5cd7eb.js",
     "service-worker.js": "/obama-spillet/service-worker.js",
-    "static/css/main.e47d98b1.chunk.css.map": "/obama-spillet/static/css/main.e47d98b1.chunk.css.map",
-    "static/js/2.772376c2.chunk.js.LICENSE.txt": "/obama-spillet/static/js/2.772376c2.chunk.js.LICENSE.txt",
+    "static/css/main.a64c230a.chunk.css.map": "/obama-spillet/static/css/main.a64c230a.chunk.css.map",
+    "static/js/2.0878e46d.chunk.js.LICENSE.txt": "/obama-spillet/static/js/2.0878e46d.chunk.js.LICENSE.txt",
     "static/media/american-flag.png": "/obama-spillet/static/media/american-flag.8ced8f71.png",
     "static/media/obama-sangen.mp3": "/obama-spillet/static/media/obama-sangen.17e3cc89.mp3",
     "static/media/obama.png": "/obama-spillet/static/media/obama.1bb75a73.png"
   },
   "entrypoints": [
     "static/js/runtime-main.9d40e554.js",
-    "static/js/2.772376c2.chunk.js",
-    "static/css/main.e47d98b1.chunk.css",
-    "static/js/main.397360df.chunk.js"
+    "static/js/2.0878e46d.chunk.js",
+    "static/css/main.a64c230a.chunk.css",
+    "static/js/main.09c151f8.chunk.js"
   ]
 }

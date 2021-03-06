@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b2b97472a4d63e244ad635d5f7c911e4",
+    "revision": "b4290adc28c01df926f2332ac8bda9a2",
     "url": "/obama-spillet/index.html"
   },
   {
-    "revision": "8b4a269afe3aa95dd368",
-    "url": "/obama-spillet/static/css/main.e47d98b1.chunk.css"
+    "revision": "09653171b8d636e0d4c2",
+    "url": "/obama-spillet/static/css/main.a64c230a.chunk.css"
   },
   {
-    "revision": "5f442cceccc8a81c5eca",
-    "url": "/obama-spillet/static/js/2.772376c2.chunk.js"
+    "revision": "e7cb47405cadea5f806b",
+    "url": "/obama-spillet/static/js/2.0878e46d.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/obama-spillet/static/js/2.772376c2.chunk.js.LICENSE.txt"
+    "url": "/obama-spillet/static/js/2.0878e46d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8b4a269afe3aa95dd368",
-    "url": "/obama-spillet/static/js/main.397360df.chunk.js"
+    "revision": "09653171b8d636e0d4c2",
+    "url": "/obama-spillet/static/js/main.09c151f8.chunk.js"
   },
   {
     "revision": "302400f53166a4389a55",
